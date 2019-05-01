@@ -1,0 +1,27 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/app.css">
+        <title></title>
+    </head>
+    <body>
+        <h1>New Farm Page</h1>
+        <form action="/farms" method="POST">
+        <label for="name">Farm Name</label>
+        <input type="text" name="name" id="name"/>
+        <h4>Fruits</h4>
+        <label for="name">First Fruit Name</label>
+        <input type="text" name="fruits[0][name]" id="name"/>
+        <label for="color">Color</label>
+        <input type="text" name="fruits[0][color]" id="color" />
+
+        <label for="name">Second Fruit Name</label>
+        <input type="text" name="fruits[1][name]" id="name"/>
+        <label for="color">Color</label>
+        <input type="text" name="fruits[1][color]" id="color" />
+
+        <input type="submit" value="Create Farm">
+        </form>
+    </body>
+    </html>

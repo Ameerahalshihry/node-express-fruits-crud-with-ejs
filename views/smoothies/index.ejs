@@ -1,0 +1,27 @@
+    <html>
+    <head>
+        
+        <link rel="stylesheet" href="/app.css">
+    </head>
+    <body> 
+        <h1>All The Smoothies</h1>
+        <nav>
+        <a href="/smoothies/new">Create a New Smoothie</a>
+        </nav>
+        
+        <ul>
+        <% for (i in smoothies) { %>
+        <li>
+            <%= smoothies[i].name %>, 
+        
+        </li>
+        <a href="/smoothies/<%= smoothies[i]._id %>">Show</a>
+        <a href="/smoothies/<%= smoothies[i]._id %>/edit">Edit</a>
+
+        <form action="/smoothies/<%= smoothies[i]._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE"/>
+        </form>
+        <% } %>
+        </ul>
+        </body>
+    </html>
